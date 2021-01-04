@@ -17,4 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/contact', [\App\Http\Controllers\Blog\ContactController::class, 'index'])->name('contact');
+
 Route::get('/about', [App\Http\Controllers\Blog\AboutController::class, 'index'])->name('about');
